@@ -1,62 +1,9 @@
+/*-------STRUCTURE--------------------------------------*/
 body {
   margin: 0;
   height: 100vh;
   /*makes the height take up the height of the viewport (screen)*/
   font-family: Open Sans Condensed, sans-serif;
-}
-
-.text-white {
-  color: #fff;
-}
-
-.p-0 {
-  padding: 0;
-}
-
-.p-1 {
-  padding: 1em;
-}
-
-.p-r-3 {
-  padding-right: 3em;
-}
-
-.m-0 {
-  margin: 0;
-}
-
-.pointer p {
-  cursor: pointer;
-}
-
-.pointer {
-  cursor: pointer;
-}
-
-.flex {
-  display: flex;
-}
-
-.outline {
-  outline: 2px solid white;
-}
-
-.flex.space-between {
-  justify-content: space-between;
-}
-
-.flex > .shrink-1 {
-  /* > means it will specify only .shrink-1 children will be affected*/
-  flex-shrink: 1;
-  /*and not the grandchildren. */
-}
-
-.flex > .grow-1 {
-  flex-grow: 1;
-}
-
-.v-center {
-  align-items: center;
 }
 
 /*---------HEADER--------*/
@@ -76,7 +23,7 @@ header {
 
 /*---------------------*/
 /*------MAIN-BODY------*/
-.body-test {
+.main-body {
   background: green;
   color: #fff;
   min-height: 70%;
@@ -107,31 +54,6 @@ header {
 
 .portfolio {
   height: 50%;
-  background: black;
-}
-
-.port-pic {
-  position: static;
-  z-index: 0;
-  outline: 2px solid white;
-}
-
-.port-pic:hover {
-  z-index: 4;
-}
-
-.red-slide {
-  position: absolute;
-  outline: 2px solid white;
-  z-index: 3;
-}
-
-.red-slide:hover {
-  left: 50px;
-}
-
-.port-slide {
-  padding: 0;
 }
 
 input {
@@ -144,6 +66,45 @@ input {
   display: block;
 }
 
+.slide {
+  height: 9rem;
+  background-origin: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.project-1 {
+  background-image: url("durotar-thumb2.png");
+  overflow: hidden;
+}
+
+.project-2 {
+  background-image: url("snow-mountain-thumb2.png");
+  overflow: hidden;
+}
+
+.project-3 {
+  background-image: url("flamingo-thumb2.png");
+  overflow: hidden;
+}
+
+.project-4 {
+  background-image: url("sunset-thumb2.png");
+  overflow: hidden;
+}
+
+.slide-pos {
+  position: relative;
+  left: 0px;
+  transition-property: left;
+  transition-duration: 2s;
+}
+
+.animate:hover .slide-trans {
+  left: 2000px;
+}
+
 .thumbnail {
   margin-top: 0;
   margin-bottom: 0;
@@ -154,10 +115,6 @@ input {
   background: brown;
 }
 
-.send {
-  margin-left: 1.2rem;
-}
-
 /*---------------------*/
 /*---------FOOTER--------*/
 footer {
@@ -165,6 +122,86 @@ footer {
   background: blue;
 }
 
+/*---------------------*/
+/*--------FLEX---------*/
+.flex {
+  display: flex;
+}
+
+.flex.space-between {
+  justify-content: space-between;
+}
+
+.flex > .shrink-1 {
+  /* > means it will specify only .shrink-1 children will be affected*/
+  flex-shrink: 1;
+  /*and not the grandchildren. */
+}
+
+.flex > .grow-1 {
+  flex-grow: 1;
+}
+
+.v-center {
+  align-items: center;
+}
+
+/*---------------------*/
+/*----------------------------------------------------------------------*/
+/*-------FORMAT--------*/
+.p-0 {
+  padding: 0;
+}
+
+.p-1 {
+  padding: 1em;
+}
+
+.p-r-3 {
+  padding-right: 3em;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.m-l-1-2 {
+  margin-left: 1.2rem;
+}
+
+/*---------------------*/
+/*--------COLORS-------*/
+.text-white {
+  color: #fff;
+}
+
+/*---------------------*/
+/*-------EFFECTS-------*/
+.pointer p {
+  cursor: pointer;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/*---------------------*/
+/*-------TESTING--------*/
+.outline {
+  outline: 2px solid white;
+}
+
+/*---------------------*/
+/*------ANIMATION------*/
+/*0%{background-image:url("red.png");left:0px;}
+    20%{background-image:url("red.png");left:200px;}
+    40%{background-image:url("red.png");left:400px;}
+    60%{background-image:url("red.png");left:600px;}
+    80%{background-image:url("red.png");left:800px;}
+    100%{background-image:url("red.png");left:1000px;}*/
+/*from{background-image:url("red.png");}
+    to{background-image:url("red.png"); left: 1000px;}*/
+/*---------------------*/
 /*THINGS YOU MIGHT USE 111
 .box {
     height: 100px;
