@@ -2,14 +2,19 @@ $primary-text: #fff;
 /*-------STRUCTURE--------------------------------------*/
 body {
     margin:0;
-    height:100vh; /*makes the height take up the height of the viewport (screen)*/
+    //height:100vh; /*makes the height take up the height of the viewport (screen)*/
     font-family: Open Sans Condensed, sans-serif;
+    background:green;
 }
 /*---------HEADER--------*/
-header {
-    background: red;
-    height: 15%;
-    font-size: 2rem;
+.heading{
+    background: black;
+}
+.name p{
+    font-size:2rem;
+}
+.name > *{
+    margin:0;
 }
 .nav p{
     margin:0;
@@ -21,14 +26,15 @@ header {
 
 /*------MAIN-BODY------*/
 .main-body{
-    background: green;
     color: $primary-text;
-    min-height:70%;
 }
 .bio{
-    height:30%;
-    background: purple;
-    //background: linear-gradient(white, black; // <--blue is fallback
+    background-origin: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-image: url("pexel-code.jpeg");
+    filter: grayscale(100%);
 }
 .bio-text{
     font-size: 3rem;
@@ -37,26 +43,27 @@ header {
     padding-top:25%;
     padding-bottom:25%;
 }
+.text-box{
+    background-image: radial-gradient(rgba(128,128,128,.9), rgba(169,169,169,.9));
+    border-radius: 50%;
+    height:300px;
+    width:300px;
+    margin:auto;
+}
 .my-pic{
     height:300px;
-    border-radius: 50%;
+    border-radius: 40%;
+    vertical-align: middle;
+    // transform: rotate(360deg);
+    // transition: left; //look up how to transition again
 }
+// .my-pic:hover{
+//     left:.5px;
+// }
 .bio-pic{
     margin-top:1.8%;
 }
-.portfolio{
-    height:50%;
-}
-input{
-    margin:1em;
-}
-.message-box{
-    padding-bottom:11rem;
-    padding-right:11rem;
-    display:block;
-}
 .slide{
-    height: 9rem;
     background-origin: center;
     background-size:cover;
     background-repeat: no-repeat;
@@ -87,82 +94,83 @@ input{
 .animate:hover .slide-trans{
     left:2000px;
 }
-
-// .animate:hover .slide-pos{
-//     animation-name: test;
-//     animation-duration: 500ms;
-//     animation-delay:.1s;
-//     // animation-iteration-count: 2;
-//     // animation-direction: alternate;
-//     animation-fill-mode: forwards;
-// }
-
-// @keyframes test{   
-//     0%{left:0px;}
-//     10%{left:200px;}
-//     20%{left:400px;}
-//     30%{left:600px;}
-//     40%{left:800px;}
-//     50%{left:1000px;}
-//     60%{left:1200px;}
-//     70%{left:1400px;}
-//     80%{left:1600px;}
-//     90%{left:1800px;}
-//     100%{left:2000px;}
-//}
-.thumbnail{
-    margin-top:0;
-    margin-bottom:0;
-}
 .contact{
-    height:20%;
-    background: brown;
-}
-/*---------------------*/
-/*---------FOOTER--------*/
-footer {
-    height:15%;
-    background: blue;
-}
-/*---------------------*/
-/*--------FLEX---------*/
-.flex {
-    display: flex;
-}
-.flex.space-between{
-    justify-content: space-between;
-}
-.flex > .shrink-1{  /* > means it will specify only .shrink-1 children will be affected*/
-    flex-shrink: 1; /*and not the grandchildren. */
-}
-.flex > .grow-1{
-    flex-grow: 1;
-}
-.v-center{
-    align-items: center;
+    background: black;
 }
 /*---------------------*/
 /*----------------------------------------------------------------------*/
 /*-------FORMAT--------*/
+header div > *{
+    margin:0;
+}
+.lh{
+    line-height: 2em;
+}
+.ilb{
+    display:inline-block;
+}
+.m-lr-5{
+    margin-left: 1.5em;
+    margin-right:1.5em;
+}
 .p-0{
     padding:0;
 }
 .p-1{
     padding: 1em;
 }
-.p-r-3{
-    padding-right: 3em;
+.p-l-1{
+    padding-left:1em;
+}
+.p-l-4{
+    padding-left: 4em;
+}
+.p-lr-5{
+    padding-left:5em;
+    padding-right:5em;
+}
+.p-r-2{
+    padding-right: 2em;
 }
 .m-0{
     margin:0;
 }
-.m-l-1-2{
-    margin-left: 1.2rem;
+.m-t-0{
+    margin-top:0;
+}
+.m-t-1{
+    margin-top: 1em;
+}
+.m-tb-1{
+    margin-top:1em;
+    margin-bottom:1em;
+}
+.m-tb-auto{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.m-l-3{
+    margin-left:3em;
+}
+.m-l-50{
+    margin-left:50em;
+}
+.p-l-0-7{
+    padding-left:.7em;
+}
+.p-l-5{
+    padding-left:5em;
+}
+.j-r{
+    text-align: right;
 }
 /*---------------------*/
-/*--------COLORS-------*/
+/*--------FONTS--------*/
 .text-white{
     color: $primary-text;
+}
+.fs{
+    font-size: 2em;
 }
 /*---------------------*/
 /*-------EFFECTS-------*/
