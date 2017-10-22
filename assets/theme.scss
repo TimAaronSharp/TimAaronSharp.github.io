@@ -2,9 +2,7 @@ $primary-text: #fff;
 /*-------STRUCTURE--------------------------------------*/
 body {
     margin:0;
-    //height:100vh; /*makes the height take up the height of the viewport (screen)*/
     font-family: Open Sans Condensed, sans-serif;
-    background:green;
 }
 /*---------HEADER--------*/
 .heading{
@@ -51,15 +49,21 @@ body {
     margin:auto;
 }
 .my-pic{
+    position: relative;
     height:300px;
     border-radius: 40%;
     vertical-align: middle;
-    // transform: rotate(360deg);
-    // transition: left; //look up how to transition again
+    left:0px;
+    transition: left 4s linear;
 }
-// .my-pic:hover{
-//     left:.5px;
-// }
+.my-pic:hover{
+    left:.001px;
+    animation:spin-to-win .5s infinite;
+}
+@keyframes spin-to-win{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
 .bio-pic{
     margin-top:1.8%;
 }
@@ -122,47 +126,12 @@ header div > *{
 .p-l-1{
     padding-left:1em;
 }
-.p-l-4{
-    padding-left: 4em;
-}
-.p-lr-5{
-    padding-left:5em;
-    padding-right:5em;
-}
-.p-r-2{
-    padding-right: 2em;
-}
-.m-0{
-    margin:0;
-}
-.m-t-0{
-    margin-top:0;
-}
 .m-t-1{
     margin-top: 1em;
-}
-.m-tb-1{
-    margin-top:1em;
-    margin-bottom:1em;
 }
 .m-tb-auto{
     margin-top: 2%;
     margin-bottom: 2%;
-}
-.m-l-3{
-    margin-left:3em;
-}
-.m-l-50{
-    margin-left:50em;
-}
-.p-l-0-7{
-    padding-left:.7em;
-}
-.p-l-5{
-    padding-left:5em;
-}
-.j-r{
-    text-align: right;
 }
 /*---------------------*/
 /*--------FONTS--------*/
@@ -181,49 +150,3 @@ header div > *{
     cursor: pointer;
 }
 /*---------------------*/
-/*-------TESTING--------*/
-.outline{
-    outline: 2px solid white;
-}
-/*---------------------*/
-/*------ANIMATION------*/
-
-    /*0%{background-image:url("red.png");left:0px;}
-    20%{background-image:url("red.png");left:200px;}
-    40%{background-image:url("red.png");left:400px;}
-    60%{background-image:url("red.png");left:600px;}
-    80%{background-image:url("red.png");left:800px;}
-    100%{background-image:url("red.png");left:1000px;}*/
-    /*from{background-image:url("red.png");}
-    to{background-image:url("red.png"); left: 1000px;}*/
-    //to{background-image: url("durotar-thumb2.png");}
-
-/*---------------------*/
-/*THINGS YOU MIGHT USE 111
-.box {
-    height: 100px;
-    width: 100px;
-    background: green;
-}
-.box.tiny{
-    height:10px;
-    width:10px;
-    background: magenta;
-    .logo{
-    border-right: 1px dashed white;
-    height: 100%;
-    transition: all 3s ease-out;
-    cursor: pointer;
-}
-.m-l-1{
-    margin-left: 1em;
-}
-
-.-lr-1{
-    padding:0 1em;
-}
-.logo:hover{
-    background: black;
-}
-}this is a test
-another test*/
