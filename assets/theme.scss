@@ -54,15 +54,21 @@ body {
     border-radius: 40%;
     vertical-align: middle;
     left:0px;
-    transition: left 4s linear;
+    transition: 4s ease-in;
+    transform: rotate(-360deg);
+    animation: spin-to-win2 4s;
 }
 .my-pic:hover{
-    left:.001px;
-    animation:spin-to-win .5s infinite;
+    animation:spin-to-win 4s;
+    transform: rotate(360deg);
 }
 @keyframes spin-to-win{
     from{transform:rotate(0deg);}
     to{transform:rotate(360deg);}
+}
+@keyframes spin-to-win2{
+    from{transform:rotate(360deg);}
+    to{transform:rotate(0deg);}
 }
 .bio-pic{
     margin-top:1.8%;
