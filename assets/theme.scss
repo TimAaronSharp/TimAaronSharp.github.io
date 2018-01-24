@@ -5,12 +5,12 @@ body {
     font-family: Open Sans Condensed, sans-serif;
 }
 /*---------HEADER--------*/
-.heading{
-    background: black;
-    position: fixed;
-    width:100%;
-    z-index: 10;
-}
+// .heading{
+//     background: black;
+//     // position: fixed;
+//     width:100%;
+//     z-index: 10;
+// }
 .name p{
     font-size:2rem;
 }
@@ -32,7 +32,8 @@ body {
 .main-body{
     color: $primary-text;
     background-image: url("programming-wallpaper-1920x1080.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+    background-attachment: fixed;
     // filter: grayscale(70%);
 }
 .bio{
@@ -92,19 +93,23 @@ body {
     background-repeat: no-repeat;
     background-position: bottom;
 }
+.skills-title{
+    font-size:5rem;
+    background-color: rgba(128,128,128,.6);
+}
 .rounded-border{
     border-radius: 5px;
 }
 .project-1{
-    background-image: url("durotar-thumb2.png");
+    background-image: url("cultist-thumbnail-actual.png");
     overflow:hidden;
 }
 .project-2{
-    background-image: url("snow-mountain-thumb2.png");
+    background-image: url("kanban-thumbnail-actual.png");
     overflow:hidden;
 }
 .project-3{
-    background-image: url("flamingo-thumb2.png");
+    background-image: url("vue-music-thumbnail-actual.png");
     overflow:hidden;
 }
 .project-4{
@@ -117,8 +122,20 @@ body {
     transition-property: left;
     transition-duration: 2s;
 }
+.proj-name-trans{
+    position: absolute;
+    right: -100px;
+    background: white;
+    color: pink;
+    z-index:50;
+    transition-property: right;
+    transition-duration: 2s;
+}
 .animate:hover .slide-trans{
     left:2000px;
+}
+.animate:hover .proj-name-trans{
+    right:1500px;
 }
 .contact{
     background: black;
@@ -139,6 +156,9 @@ header div > *{
     margin-left: 1.5em;
     margin-right:1.5em;
 }
+.skills-box{
+    width:100vw;
+}
 .p-0{
     padding:0;
 }
@@ -151,8 +171,14 @@ header div > *{
 .m-t-1{
     margin-top: 1em;
 }
-.m-t-15{
-    margin-top:10%;
+.m-t-30{
+    margin-top:30%;
+}
+.m-t-20{
+    margin-top:20%;
+}
+.m-t-5{
+    margin-top:5%;
 }
 .skills{
     // padding-left: 20rem;
