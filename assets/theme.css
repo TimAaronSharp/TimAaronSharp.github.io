@@ -7,6 +7,9 @@ body {
 /*---------HEADER--------*/
 .heading {
   background: black;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 
 .name p {
@@ -15,6 +18,10 @@ body {
 
 .name > * {
   margin: 0;
+}
+
+.nav-buttons {
+  line-height: 6rem;
 }
 
 .nav p {
@@ -29,6 +36,8 @@ body {
 /*------MAIN-BODY------*/
 .main-body {
   color: #fff;
+  background-image: url("programming-wallpaper-1920x1080.jpg");
+  background-repeat: no-repeat;
 }
 
 .bio {
@@ -36,7 +45,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
-  background-image: url("pexel-code.jpeg");
+  margin-top: 5%;
   filter: grayscale(100%);
 }
 
@@ -50,11 +59,15 @@ body {
 }
 
 .text-box {
-  background-image: radial-gradient(rgba(128, 128, 128, 0.9), rgba(169, 169, 169, 0.9));
+  background-image: radial-gradient(rgba(128, 128, 128, 0.6), rgba(169, 169, 169, 0.6));
   border-radius: 50%;
   height: 300px;
   width: 300px;
   margin: auto;
+}
+
+.outline {
+  outline: 2px solid red;
 }
 
 .my-pic {
@@ -65,11 +78,11 @@ body {
   left: 0px;
   transition: 4s ease-in;
   transform: rotate(-360deg);
-  animation: spin-to-win2 4s;
+  animation: spin-to-win2 2s;
 }
 
 .my-pic:hover {
-  animation: spin-to-win 4s;
+  animation: spin-to-win 2s;
   transform: rotate(360deg);
 }
 
@@ -100,6 +113,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
+}
+
+.rounded-border {
+  border-radius: 5px;
 }
 
 .project-1 {
@@ -173,9 +190,30 @@ header div > * {
   margin-top: 1em;
 }
 
+.m-t-15 {
+  margin-top: 10%;
+}
+
+.skills {
+  margin: 5% auto;
+  background-color: rgba(128, 128, 128, 0.6);
+}
+
+.thumbnail-box {
+  width: 30%;
+}
+
+.img-box {
+  width: 100%;
+}
+
 .m-tb-auto {
   margin-top: 2%;
   margin-bottom: 2%;
+}
+
+.pos-r {
+  position: relative;
 }
 
 /*---------------------*/
