@@ -70,13 +70,12 @@ body {
   border-radius: 40%;
   vertical-align: middle;
   left: 0px;
-  transition: 4s ease-in;
+  transition: 20s ease-in;
   transform: rotate(-360deg);
-  animation: spin-to-win2 2s;
 }
 
 .my-pic:hover {
-  animation: spin-to-win 2s;
+  animation: spin-to-win 20s infinite;
   transform: rotate(360deg);
 }
 
@@ -85,16 +84,7 @@ body {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin-to-win2 {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
+    transform: rotate(10800deg);
   }
 }
 
@@ -147,9 +137,21 @@ body {
 
 .proj-name-trans {
   position: absolute;
-  right: -100px;
-  background: white;
-  color: pink;
+  font-size: 3rem;
+  top: 52%;
+  left: -20%;
+  color: white;
+  z-index: 50;
+  transition-property: left;
+  transition-duration: 2s;
+}
+
+.proj-desc-trans {
+  position: absolute;
+  font-size: 3rem;
+  top: 52%;
+  right: -50%;
+  color: white;
   z-index: 50;
   transition-property: right;
   transition-duration: 2s;
@@ -160,7 +162,11 @@ body {
 }
 
 .animate:hover .proj-name-trans {
-  right: 1500px;
+  left: 10%;
+}
+
+.animate:hover .proj-desc-trans {
+  right: 10%;
 }
 
 .contact {
@@ -222,6 +228,10 @@ header div > * {
 .skills {
   margin: 5% auto;
   background-color: rgba(128, 128, 128, 0.6);
+}
+
+.description-box {
+  background: rgba(128, 128, 128, 0.6);
 }
 
 .thumbnail-box {
